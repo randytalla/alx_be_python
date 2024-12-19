@@ -1,6 +1,3 @@
-# weather_advice.py
-
-# Prompt User for Weather Input
 current_weather = input("What's the weather like today? (sunny/rainy/cold): ").lower()
 
 # Provide Clothing Recommendations
