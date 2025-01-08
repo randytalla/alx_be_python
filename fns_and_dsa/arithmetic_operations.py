@@ -10,7 +10,7 @@ def perform_operation (num1:float, num2:float, operation:str):
             return num1 / num2
         except ZeroDivisionError:
             return "Error: Division by zero is not allowed"
-        else:
+    else:
             return "Error: Invalid operation"
 
 
