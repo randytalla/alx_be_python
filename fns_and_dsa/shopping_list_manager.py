@@ -18,22 +18,22 @@ def main():
         choice = int(choice)
 
 
-        if choice == 1:
-            item = input ("Enter the item to add: ")
+        if choice == "1":
+            item = input ("Enter the item to add: ").strip()
             Shopping_list.append(item)
             print("Item added to the list")
-        elif choice == 2:
+        elif choice == "2":
             item = input("Enter the item to remove: ")
             try:
                 Shopping_list.remove(item)
                 print("Item removed from the list")
             except ValueError:
                 print("Item not found in the list")
-        elif choice == 3:
+        elif choice == "3":
             print("Shopping list items:")
             for item in Shopping_list:
                 print(item)
-        elif choice == 4:
+        elif choice == "4":
             print("Exiting the program")
             break
         else:
