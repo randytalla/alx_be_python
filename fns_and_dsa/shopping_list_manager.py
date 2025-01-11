@@ -24,7 +24,7 @@ def main():
                 print(f"{item} is not in the shopping list")
         elif choice == "3":
             print("Shopping list items:")
-            for i, item in enumerate(shopping_list, start=1):
+            for i, item in enumerated(shopping_list, start=1):
                 print(f"{i}. {item}")
         elif choice == "4":
             print("Goodbye!")
