@@ -1,18 +1,19 @@
-def perform_operation (num1, num2, operation):
-    match operation:
-        case "add":
-            return num1 + num2
-        case "subtract":
-            return num1 - num2
-        case "multiply":
-            return num1 * num2
-        case "divide":
-            if num2 != 0:
-                return num1 / num2
-            else:
-                return "Error: Division by zero is not allowed"
-        case _:
-            return "Error: Invalid operation"
+def perform_operation (int: num1, nint: num2, str: operation):
+    if operation == 'add':
+        return num1 + num2
+    elif operation == 'subtract':
+        return num1 - num2
+    elif operation == 'multiply':
+        return num1 * num2
+    elif operation == 'divide':
+        if num2 == 0:
+            return "Error: Division by zero is not allowed"
+        return num1 / num2
+    else:
+        return "Error: Invalid operation. Please choose add, substract, multiply divide"
+
+
+
 
 
 # if __name__ == "__main__":
