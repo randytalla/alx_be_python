@@ -1,17 +1,27 @@
-from datetime import datetime, timedelta
+FAHRENHEIT_TO_CELSIUS_FACTOR = 5/9
+CELSIUS_TO_FAHRENHEIT_FACTOR = 9/5
 
-def calculate_future_date():
-    """Calculate the future date after adding the specified number of days to the current date."""
+def convert_to_celsius(fahrenheit):
+    return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
+
+def convert_to_fahrenheit(celsius):
+    return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
+
+def main():
     try:
-        days = int(input("Enter the number of days to add to the current date: "))
-        current_date = datetime.now()
-        future_date = current_date + timedelta(days=days)
-        return future_date.strftime("%Y-%m-%d %H:%M:%S")
+        temperature = float(input("Enter the temperature to convert: "))
+        unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").upper().strip()
+        if unit == 'C':
+            converted = convert_to_fahrenheit(temperature)
+            print(f"{temperature}°C is {converted:.2f}°F")
+        elif unit == 'F':
+            converted = convert_to_celsius(temperature)
+            print(f"{temperature}°F is {converted:.2f}°C")
+        else:
+            print("Invalid unit. Please enter 'C' for Celsius or 'F' for Fahrenheit.")
     except ValueError:
-        print("Invalid input. Please enter an integer value.")
+            print("Invalid input. Please enter a number.")
+            print("Invalid temperature. Please enter a numeric value.")
 
-# Main block
-if __name__ == "__main__":
-    future_date = calculate_future_date()
-    if future_date:
-        print(f"The future date is {future_date}")
+if __name__ == "__main__": 
+    main()
