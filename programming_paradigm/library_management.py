@@ -29,7 +29,7 @@ class Library:
 
     def  check_out_book(self, title):
         for book in self.__books:
-            if book.title == title and book.check_cout():
+            if book.title == title and book.check_out():
                 print(f"Checked out {book}")
                 return
         print(f"Sorry, {title} in not not available")
