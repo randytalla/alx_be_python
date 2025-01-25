@@ -18,4 +18,4 @@ class Circle(Shape):
 
 
     def area(self):
-        return 3.14159 * self.radius ** 2
+        return math.pi * self.radius ** 2
