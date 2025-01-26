@@ -14,4 +14,4 @@ class Book:
 
     def __repr__(self):
         # Ensure this returns the "1984 by George Orwell, published in 1949" format
-        return f"Book ('{self.title}', '{self.author}', {self.year})"
+        return f"Book('{self.title}', '{self.author}', {self.year})"
